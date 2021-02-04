@@ -1,10 +1,10 @@
 import random
 import sys
 file  = open("test.txt","w+")
-file.write("What is the longest river in Russia and Europe ? _ Volga \n")
-file.write("What is the capital city of Armenia ? _ Yerevan \n")
-file.write("5+5 ? _ 10 \n")
-file.write("15*2= ? _ 30 \n")
+file.write("What is the longest river in Russia and Europe ?  Volga \n")
+file.write("What is the capital city of Armenia ?  Yerevan \n")
+file.write("5+5 ? 10 \n")
+file.write("15*2= ?  30 \n")
 x = random.randint(1,4);
 file.close()
 count = 0
@@ -15,8 +15,8 @@ f1 = f.readlines()
 for line in f1:
     count +=1
     if(count == x):
-        question = line[:line.index('_')]
-        answer = line[line.index('_')+1:].strip()
+        question = line[:line.index('?')]
+        answer = line[line.index('?')+1:].strip()
 
 print(question)
 str = '-'*len(answer)
